@@ -1,0 +1,23 @@
+{
+  "name": "learning-journal-server",
+  "version": "1.0.0",
+  "description": "Express.js server for serving the learning journal HTML",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "express",
+    "learning",
+    "journal"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

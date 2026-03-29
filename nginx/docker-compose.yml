@@ -1,0 +1,60 @@
+services:
+  # App Instance 1
+  learning-journal-app-1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: learning-journal-app-1
+    ports:
+      - "3001:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      INSTANCE: 1
+    # restart: unless-stopped
+    # healthcheck:
+    #   test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"]
+    #   interval: 30s
+    #   timeout: 3s
+    #   retries: 3
+    #   start_period: 5s
+
+  # App Instance 2
+  learning-journal-app-2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: learning-journal-app-2
+    ports:
+      - "3002:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      INSTANCE: 2
+    # restart: unless-stopped
+    # healthcheck:
+    #   test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"]
+    #   interval: 30s
+    #   timeout: 3s
+    #   retries: 3
+    #   start_period: 5s
+
+  # App Instance 3
+  learning-journal-app-3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: learning-journal-app-3
+    ports:
+      - "3003:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      INSTANCE: 3
+    # restart: unless-stopped
+    # healthcheck:
+    #   test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000', (r) => {if (r.statusCode !== 200) throw new Error(r.statusCode)})"]
+    #   interval: 30s
+    #   timeout: 3s
+    #   retries: 3
+    #   start_period: 5s
